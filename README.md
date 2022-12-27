@@ -14,6 +14,8 @@ Code for this program can be downloaded from: https://github.com/gardnerd06/22_c
 Webpage for the deployed website:
 
 #Screenshots
+![Screenshot (15)](https://user-images.githubusercontent.com/115792714/209735817-76415184-46c7-40a6-a46e-4394d9884110.png)
+![Screenshot (16)](https://user-images.githubusercontent.com/115792714/209735822-41787994-9d58-48b8-8b08-644eefcf5b84.png)
 
 #License
 
