@@ -133,22 +133,76 @@ $(function () {
   if (result9 < num) {
     $("#hour-6").addClass("row time-block past");
   }
+});
 
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
+$(function saveInput() {
+  $(".btn").click(function () {
+    alert("You clicked the save button!");
+    let input = $("#txt").val();
+    console.log(input);
+  });
+
+  $(".btn2").click(function () {
+    alert("You clicked the save button!");
+    let input = $("#txt2").val();
+    console.log(input);
+  });
+
+  $(".btn3").click(function () {
+    alert("You clicked the save button!");
+    let input = $("#txt3").val();
+    console.log(input);
+  });
+
+  $(".btn4").click(function () {
+    alert("You clicked the save button!");
+    let input = $("#txt4").val();
+    console.log(input);
+  });
+
+  $(".btn5").click(function () {
+    alert("You clicked the save button!");
+    let input = $("#txt5").val();
+    console.log(input);
+  });
+
+  $(".btn6").click(function () {
+    alert("You clicked the save button!");
+    let input = $("#txt6").val();
+    console.log(input);
+  });
+
+  $(".btn7").click(function () {
+    alert("You clicked the save button!");
+    let input = $("#txt7").val();
+    console.log(input);
+  });
+
+  $(".btn8").click(function () {
+    alert("You clicked the save button!");
+    let input = $("#txt8").val();
+    console.log(input);
+  });
+
+  $(".btn9").click(function () {
+    alert("You clicked the save button!");
+    let input = $("#txt9").val();
+    console.log(input);
+  });
+
+  $(".btn10").click(function () {
+    alert("You clicked the save button!");
+    let input = $("#txt10").val();
+    console.log(input);
+  });
 });
-$(function () {
-  // TODO: Add a listener for click events on the save button. This code should
-  // use the id in the containing time-block as a key to save the user input in
-  // local storage. HINT: What does `this` reference in the click listener
-  // function? How can DOM traversal be used to get the "hour-x" id of the
-  // time-block containing the button that was clicked? How might the id be
-  // useful when saving the description in local storage?
-  $("btn saveBtn col-2 col-md-1").click();
-});
+
+// TODO: Add a listener for click events on the save button. This code should
+// use the id in the containing time-block as a key to save the user input in
+// local storage. HINT: What does `this` reference in the click listener
+// function? How can DOM traversal be used to get the "hour-x" id of the
+// time-block containing the button that was clicked? How might the id be
+// useful when saving the description in local storage?
 
 //
 // TODO: Add code to get any user input that was saved in localStorage and set
