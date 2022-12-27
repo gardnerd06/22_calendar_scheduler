@@ -1,6 +1,3 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
 var current = dayjs();
 
 // Added code to display the current date in the header of the page.
@@ -9,8 +6,9 @@ $(function currentTime() {
   window.setInterval(currentTime);
   $("#currentDay").text(now);
 });
-
+//added function for setting the display attributes after comparing it to the time of day.
 $(function () {
+  //declared variables grabbing each hour of the day
   var num = dayjs().hour();
   var here = document.getElementById("hour-9");
   var here1 = document.getElementById("hour-10");
@@ -33,7 +31,7 @@ $(function () {
   var result7 = here7.dataset.date;
   var result8 = here8.dataset.date;
   var result9 = here9.dataset.date;
-
+  //created if statments to determine what time is currently being shown
   if (num == result) {
     $("#hour-9").addClass("row time-block present");
   }
@@ -134,78 +132,91 @@ $(function () {
     $("#hour-6").addClass("row time-block past");
   }
 });
-
+//added save button to make sure users input persists if page is refreshed
 $(function saveInput() {
   $(".btn").click(function () {
     alert("You clicked the save button!");
     let input = $("#txt").val();
-    console.log(input);
+    localStorage.setItem("Info9am", input);
   });
 
   $(".btn2").click(function () {
     alert("You clicked the save button!");
-    let input = $("#txt2").val();
-    console.log(input);
+    let input2 = $("#txt2").val();
+    localStorage.setItem("Info10am", input2);
   });
 
   $(".btn3").click(function () {
     alert("You clicked the save button!");
-    let input = $("#txt3").val();
-    console.log(input);
+    let input3 = $("#txt3").val();
+    localStorage.setItem("Info11am", input3);
   });
 
   $(".btn4").click(function () {
     alert("You clicked the save button!");
-    let input = $("#txt4").val();
-    console.log(input);
+    let input4 = $("#txt4").val();
+    localStorage.setItem("Info12pm", input4);
   });
 
   $(".btn5").click(function () {
     alert("You clicked the save button!");
-    let input = $("#txt5").val();
-    console.log(input);
+    let input5 = $("#txt5").val();
+    localStorage.setItem("Info1pm", input5);
   });
 
   $(".btn6").click(function () {
     alert("You clicked the save button!");
-    let input = $("#txt6").val();
-    console.log(input);
+    let input6 = $("#txt6").val();
+    localStorage.setItem("Info2pm", input6);
   });
 
   $(".btn7").click(function () {
     alert("You clicked the save button!");
-    let input = $("#txt7").val();
-    console.log(input);
+    let input7 = $("#txt7").val();
+    localStorage.setItem("Info3pm", input7);
   });
 
   $(".btn8").click(function () {
     alert("You clicked the save button!");
-    let input = $("#txt8").val();
-    console.log(input);
+    let input8 = $("#txt8").val();
+    localStorage.setItem("Info4pm", input8);
   });
 
   $(".btn9").click(function () {
     alert("You clicked the save button!");
-    let input = $("#txt9").val();
-    console.log(input);
+    let input9 = $("#txt9").val();
+    localStorage.setItem("Info5pm", input9);
   });
 
   $(".btn10").click(function () {
     alert("You clicked the save button!");
-    let input = $("#txt10").val();
-    console.log(input);
+    let input10 = $("#txt10").val();
+    localStorage.setItem("Info6pm", input10);
   });
 });
-
-// TODO: Add a listener for click events on the save button. This code should
-// use the id in the containing time-block as a key to save the user input in
-// local storage. HINT: What does `this` reference in the click listener
-// function? How can DOM traversal be used to get the "hour-x" id of the
-// time-block containing the button that was clicked? How might the id be
-// useful when saving the description in local storage?
-
-//
-// TODO: Add code to get any user input that was saved in localStorage and set
-// the values of the corresponding textarea elements. HINT: How can the id
-// attribute of each time-block be used to do this?
-//
+//created a button to retrieve the input data from local storage and display it to the webpage.
+$(function () {
+  $(".btn11").click(function () {
+    alert("You clicked the Retrieve button!");
+    var saved = localStorage.getItem("Info6pm");
+    var saved1 = localStorage.getItem("Info5pm");
+    var saved2 = localStorage.getItem("Info4pm");
+    var saved3 = localStorage.getItem("Info3pm");
+    var saved4 = localStorage.getItem("Info2pm");
+    var saved5 = localStorage.getItem("Info1pm");
+    var saved6 = localStorage.getItem("Info12pm");
+    var saved7 = localStorage.getItem("Info11am");
+    var saved8 = localStorage.getItem("Info10am");
+    var saved9 = localStorage.getItem("Info9am");
+    $("#txt10").text(saved);
+    $("#txt9").text(saved1);
+    $("#txt8").text(saved2);
+    $("#txt7").text(saved3);
+    $("#txt6").text(saved4);
+    $("#txt5").text(saved5);
+    $("#txt4").text(saved6);
+    $("#txt3").text(saved7);
+    $("#txt2").text(saved8);
+    $("#txt").text(saved9);
+  });
+});
