@@ -196,27 +196,25 @@ $(function saveInput() {
 });
 //created a button to retrieve the input data from local storage and display it to the webpage.
 $(function () {
-  
-    alert("Your saved appointments have been restored!");
-    var saved = localStorage.getItem("Info6pm");
-    var saved1 = localStorage.getItem("Info5pm");
-    var saved2 = localStorage.getItem("Info4pm");
-    var saved3 = localStorage.getItem("Info3pm");
-    var saved4 = localStorage.getItem("Info2pm");
-    var saved5 = localStorage.getItem("Info1pm");
-    var saved6 = localStorage.getItem("Info12pm");
-    var saved7 = localStorage.getItem("Info11am");
-    var saved8 = localStorage.getItem("Info10am");
-    var saved9 = localStorage.getItem("Info9am");
-    $("#txt10").text(saved);
-    $("#txt9").text(saved1);
-    $("#txt8").text(saved2);
-    $("#txt7").text(saved3);
-    $("#txt6").text(saved4);
-    $("#txt5").text(saved5);
-    $("#txt4").text(saved6);
-    $("#txt3").text(saved7);
-    $("#txt2").text(saved8);
-    $("#txt").text(saved9);
-  
+  alert("Any saved appointments will be displayed!");
+  var saved = localStorage.getItem("Info6pm");
+  var saved1 = localStorage.getItem("Info5pm");
+  var saved2 = localStorage.getItem("Info4pm");
+  var saved3 = localStorage.getItem("Info3pm");
+  var saved4 = localStorage.getItem("Info2pm");
+  var saved5 = localStorage.getItem("Info1pm");
+  var saved6 = localStorage.getItem("Info12pm");
+  var saved7 = localStorage.getItem("Info11am");
+  var saved8 = localStorage.getItem("Info10am");
+  var saved9 = localStorage.getItem("Info9am");
+  $("#txt10").text(saved);
+  $("#txt9").text(saved1);
+  $("#txt8").text(saved2);
+  $("#txt7").text(saved3);
+  $("#txt6").text(saved4);
+  $("#txt5").text(saved5);
+  $("#txt4").text(saved6);
+  $("#txt3").text(saved7);
+  $("#txt2").text(saved8);
+  $("#txt").text(saved9);
 });
