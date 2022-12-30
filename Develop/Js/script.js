@@ -196,8 +196,8 @@ $(function saveInput() {
 });
 //created a button to retrieve the input data from local storage and display it to the webpage.
 $(function () {
-  $(".btn11").click(function () {
-    alert("You clicked the Retrieve button!");
+  
+    alert("Your saved appointments have been restored!");
     var saved = localStorage.getItem("Info6pm");
     var saved1 = localStorage.getItem("Info5pm");
     var saved2 = localStorage.getItem("Info4pm");
@@ -218,5 +218,5 @@ $(function () {
     $("#txt3").text(saved7);
     $("#txt2").text(saved8);
     $("#txt").text(saved9);
-  });
+  
 });
